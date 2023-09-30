@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASS}
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      jdbc:
+        lob.non-contextual-creation: true
+    properties:
+      hibernate:
+        show_sql: true
+  servlet:
+    multipart:
+      max-file-size: 200MB
+
+server:
+  error:
+    include-stacktrace: never
+
+images:
+  destination: ${IMAGES_DESTINATION}
+  testimony: ${IMAGES_TESTIMONY}
+
